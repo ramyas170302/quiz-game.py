@@ -1,0 +1,165 @@
+# quiz game using function.
+
+print("welcome to quiz game 😊👍")
+#create dict
+data={
+
+    "1. Who developed Python programming language?": {
+        "option": ["a. Dennis Ritchie", "b. James Gosling", "c. Guido van Rossum", "d. Bjarne Stroustrup"],
+        "answer": "c"
+    },
+    "2. In which year was Python first released?": {
+        "option": ["a. 1989", "b. 1991", "c. 1995", "d. 2000"],
+        "answer": "b"
+    },
+    "3. What is the file extension of a Python file?": {
+        "option": ["a. .java", "b. .py", "c. .txt", "d. .exe"],
+        "answer": "b"
+    },
+    "4. Which keyword is used to define a function in Python?": {
+        "option": ["a. func", "b. def", "c. function", "d. define"],
+        "answer": "b"
+    },
+    "5. What is the output of: print(type(10)) ?": {
+        "option": ["a. <class 'str'>", "b. <class 'int'>", "c. <class 'float'>", "d. <class 'bool'>"],
+        "answer": "b"
+    },
+    "6. Which of the following is a mutable data type in Python?": {
+        "option": ["a. tuple", "b. list", "c. string", "d. int"],
+        "answer": "b"
+    },
+    "7. What does the 'len()' function do in Python?": {
+        "option": ["a. Returns number of items", "b. Returns last element", "c. Returns max value", "d. None of these"],
+        "answer": "a"
+    },
+    "8. Which operator is used for floor division in Python?": {
+        "option": ["a. /", "b. %", "c. //", "d. **"],
+        "answer": "c"
+    },
+    "9. What is the correct way to start a comment in Python?": {
+        "option": ["a. //", "b. <!--", "c. #", "d. %"],
+        "answer": "c"
+    },
+    "10. Which of the following is used to handle exceptions in Python?": {
+        "option": ["a. try-except", "b. if-else", "c. switch-case", "d. for-while"],
+        "answer": "a"
+    }
+}
+
+
+
+def question ():
+    score=0
+    for question in  data:  # for questions    
+        print(question)
+        for i in data[question]["option"]:   # for options
+            print(i)
+        ans=input("enter your answer a/b/c/d :").lower()
+        
+
+    #for question in data:
+        final=data[question]["answer"]
+        if final==ans:  # check the answer
+            print("correct👌😎")
+            score+=1
+        else:
+            print(f"wrong 😒 correct answer is {final}")
+    print(f"your score is {score}/{len(data)}")
+    if score==5:   # motivation
+        print("you are intelligent.very good..keep it up. 👌😎😊")
+    elif score==4:
+        print("good nice try 😎..keep pratice ")
+    elif score<=3:
+        print("need to partice more.. 😒 ")
+question()
+
+
+
+#quiz game using oop 
+
+print ("Welcome to quiz game..")
+class quiz:
+    def __init__(self):      # attribute
+        self.data = {
+    "1. Who developed Python programming language?": {
+        "option": ["a. Dennis Ritchie", "b. James Gosling", "c. Guido van Rossum", "d. Bjarne Stroustrup"],
+        "answer": "c"
+    },
+    "2. In which year was Python first released?": {
+        "option": ["a. 1989", "b. 1991", "c. 1995", "d. 2000"],
+        "answer": "b"
+    },
+    "3. What is the file extension of a Python file?": {
+        "option": ["a. .java", "b. .py", "c. .txt", "d. .exe"],
+        "answer": "b"
+    },
+    "4. Which keyword is used to define a function in Python?": {
+        "option": ["a. func", "b. def", "c. function", "d. define"],
+        "answer": "b"
+    },
+    "5. What is the output of: print(type(10)) ?": {
+        "option": ["a. <class 'str'>", "b. <class 'int'>", "c. <class 'float'>", "d. <class 'bool'>"],
+        "answer": "b"
+    },
+    "6. Which of the following is a mutable data type in Python?": {
+        "option": ["a. tuple", "b. list", "c. string", "d. int"],
+        "answer": "b"
+    },
+    "7. What does the 'len()' function do in Python?": {
+        "option": ["a. Returns number of items", "b. Returns last element", "c. Returns max value", "d. None of these"],
+        "answer": "a"
+    },
+    "8. Which operator is used for floor division in Python?": {
+        "option": ["a. /", "b. %", "c. //", "d. **"],
+        "answer": "c"
+    },
+    "9. What is the correct way to start a comment in Python?": {
+        "option": ["a. //", "b. <!--", "c. #", "d. %"],
+        "answer": "c"
+    },
+    "10. Which of the following is used to handle exceptions in Python?": {
+        "option": ["a. try-except", "b. if-else", "c. switch-case", "d. for-while"],
+        "answer": "a"
+    }
+}
+
+        
+    def start(self):         # method
+        score=0
+        for question in self.data:  # extract questions from the data 
+            print(question)
+            for i in self.data[question]["option"]:  # extract options
+                print(i)
+            ans=input("enter you answer:\n")
+            if ans==self.data[question]["answer"]: # check answer is correct or not
+                score+=1
+                print("good correct answer👌")
+            else:
+                print("wrong answer.😒")
+        print(f"your score is {score}/{len(self.data)}")            
+        
+        if score==5:    # final
+            print("you are intelligent.very good..keep it up. 👌😎😊")
+        elif score==4:
+            print("good nice try...keep practice 😎 ")
+        else:
+            print("need to partice more.. 😒 ")
+quiz1=quiz()   # create quiz1 class
+quiz1.start()   # calling method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
